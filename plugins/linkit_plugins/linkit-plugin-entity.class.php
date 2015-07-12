@@ -219,7 +219,7 @@ class LinkitPluginEntity extends LinkitPlugin {
     // Bundle check.
     if (isset($this->entity_key_bundle) && isset($this->conf['bundles']) ) {
       if ($bundles = array_filter($this->conf['bundles'])) {
-        $this->query->propertyCondition($this->entity_key_bundle, $bundles, 'IN');
+        $this->query->entityCondition('bundle', $bundles, 'IN');
       }
     }
 
